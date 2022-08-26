@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -31,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'website.apps.WebsiteConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,11 +78,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'website',
+        'NAME': 'djangodb',
         'HOST': 'localhost',
-        'USERNAME': 'root',
+        'USER': 'root',
         'PASSWORD':  '',
-        'PORT': '3306',
+        'PORT': '3360',
     }
 }
 
@@ -105,14 +107,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/4.1/topics/i18n/
-
+# https://docs.djangoproject.com/en/1.11/topics/i18n/
 LANGUAGE_CODE = 'pt-br'
-
-TIME_ZONE = 'America-Maceio'
-
+TIME_ZONE = 'America/Maceio'
 USE_I18N = True
-
+USE_L10N = True
 USE_TZ = True
 
 
